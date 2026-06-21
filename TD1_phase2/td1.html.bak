@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TD1</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+		<header>
+			<img src="images/logo.png" alt="Logo" width="50">
+			<h1>Serveur Sécurité - Monitoring</h1>
+		</header>
+		
+        <h2>Alertes de sécurité</h2>
+		
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>IP Source</th>
+                    <th>Type</th>
+                    <th>Sévérité</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>03/05/2026</td>
+                    <td>192.168.1.10</td>
+                    <td>Intrusion</td>
+                    <td>Élevée</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>03/05/2026</td>
+                    <td>10.0.0.5</td>
+					<td>Scan de ports</td>
+					<td>Moyenne</td>
+                </tr>
+            </tbody>
+        </table>
+		
+		<h2>Ajouter une alerte</h2>
+		<form method="get" action="ajouterAlerte">
+			<label>Port :</label>
+			<input type="text" name="port" value="port"/>
+			
+			<br>
+			<label>IP Source :</label>
+			<input type="text" name="ip" value="ip"/>
+			
+			<br>
+			<label>Type :</label>
+			<select>
+				<option value="intrusion">Intrusion</option>
+				<option value="scan_ports">Scan de ports</option>
+			</select>
+			
+			<br>
+			<label for="severite">Sévérité</label>
+			<select name="severite" id="severite">
+				<option value="faible">Faible</option>
+				<option value="moyenne">Moyenne</option>
+				<option value="elevee">Elevée</option>
+			</select>
+			
+			<br>
+			<label>Action :</label>
+			<div>
+				<input type="radio" id="action1" name="action" value="autoriser"/>
+				<label>Autoriser</label>
+				<input type="radio" id="action2" name="action" value="bloquer"/>
+				<label>Bloquer</label>
+			</div>
+			
+			<button type="submit" value="envoyer">Ajouter</button>
+			
+		</form>
+		
+		<h2>Veille sécurité</h2>
+		
+		<section>
+			<article>
+				<h3>Nouvelle faille détectée</h3>
+				<p>Une vulnérabilité critique a été identifiée sur certains serveurs web.</p>
+				<a href="">Lire le rapport</a>
+			</article>
+				
+			<article>
+				<h3>Mise à jour de sécurité</h3>
+				<p>Un correctif important est disponible pour les systèmes Linux.</p>
+				<a href="">Voir les détails</a>
+			</article>
+		</section>
+    </body>
+</html>

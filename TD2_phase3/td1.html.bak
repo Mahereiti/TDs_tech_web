@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TD1</title>
+    </head>
+    <body>
+		<header>
+			<img src="images/logo.png" alt="Logo" width="50">
+			<h1>NomServer</h1>
+		</header>
+		
+        <h1>Serveur Sécurité - Monitoring</h1>
+        <h2>Alertes de sécurité</h2>
+		
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>IP Source</th>
+                    <th>Type</th>
+                    <th>Sévérité</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>03/05/2026</td>
+                    <td>192.168.1.10</td>
+                    <td>Intrusion</td>
+                    <td>Élevée</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>03/05/2026</td>
+                    <td>10.0.0.5</td>
+					<td>Scan de ports</td>
+					<td>Moyenne</td>
+                </tr>
+            </tbody>
+        </table>
+		
+		<h2>Ajouter une alerte</h2>
+		<form>
+			<label>Port :</label>
+			<input type="text"/>
+			
+			<br>
+			<label>IP Source :</label>
+			<input type="text"/>
+			
+			<br>
+			<label>Type :</label>
+			<select>
+				<option value="intrusion">Intrusion</option>
+				<option value="scan_ports">Scan de ports</option>
+			</select>
+			
+			<br>
+			<label>Sévérité</label>
+			<select>
+				<option>Faible</option>
+				<option>Moyenne</option>
+				<option>Elevée</option>
+			</select>
+			
+			<br><br>
+			<label>Action :</label>
+			<br><br>
+			<div>
+				<input type="radio" value="autoriser" name="autoriserChoix"/>
+				<label>Autoriser</label>
+				<input type="radio" value="bloquer" name="autoriserChoix"/>
+				<label>Bloquer</label>
+			</div>
+			
+			<button type="submit">Ajouter</button>
+			
+		</form>
+		
+		<h2>Veille sécurité</h2>
+		
+		<article>
+			<h3>Nouvelle faille détectée</h3>
+			<p>Une vulnérabilité critique a été identifiée sur certains serveurs web.</p>
+			<a href="">Lire le rapport</a>
+		</article>
+			
+		<article>
+			<h3>Mise à jour de sécurité</h3>
+			<p>Un correctif important est disponible pour les systèmes Linux.</p>
+			<a href="">Voir les détails</a>
+		</article>
+    </body>
+</html>

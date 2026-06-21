@@ -1,0 +1,40 @@
+function ajouter_regle() {
+
+	var port = document.getElementById("new_regle_port").value;
+	var ip = document.getElementById("new_regle_ip").value;
+	var type = document.getElementById("new_regle_type").value;
+	var severite = document.getElementById("new_regle_severite").value;
+	
+	// Recupere action
+	var action1 = document.getElementById("action1");
+	var action2 = document.getElementById("action2");
+	var actionFinale = "";
+	if (action1.checked) {
+		actionFinale = action1.value;
+	}
+	if (action2.checked) {
+		actionFinale = action2.value;
+	}
+	
+	//Affiche info new regle en alert
+	if (port!="" && ip!="" && type!="" && severite!="" && actionFinale!="") {
+		var regle = [port, ip, type, severite, actionFinale];
+		ajouter_regle_tableau(regle);
+		var nouvelleLigne = document.createElement("tr");
+	nouvelleLigne.innerHTML = (
+		<>
+			<td>{regle[0]}</td>
+			<td>{regle[1]}</td>
+			<td>{regle[2]}</td>
+			<td>{regle[3]}</td>
+			<td>{regle[4]}</td>
+		</>
+	);
+		alert("Alerte ajoutée :\n> Port: "+port+"\n> Ip: "+ip+"\n> Type: "+type+"\n> Severite: "+severite+"\n> Action: "+actionFinale);
+
+	}
+}
+
+function ajouter_regle_tableau(regle) {
+	
+}
