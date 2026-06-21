@@ -25,5 +25,7 @@ Un catalogue de produits interactif type e-commerce.
 
 ### Lancement phase 4 : 
 cd TD1_phase4/ProjetVues
+
 npm istall
+
 npm run dev
