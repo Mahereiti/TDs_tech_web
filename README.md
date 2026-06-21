@@ -22,3 +22,8 @@ Un catalogue de produits interactif type e-commerce.
 - Phase 2 : Ajout de la Présentation (CSS3)
 - Phase 3 : Ajout Dynamisme (JavaScript Natif)
 - Phase 4 : Transformation en Vue.js
+
+### Lancement phase 4 : 
+cd TD1_phase4/ProjetVues
+npm istall
+npm run dev
